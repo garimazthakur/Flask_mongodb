@@ -1,0 +1,17 @@
+.idea
+
+/venv
+
+*.pyc
+
+*.log
+
+/media
+/uploads
+
+/uploads
+
+.env
+
+.vscode
+

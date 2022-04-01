@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: "Admin Login"
+  description: An API to verify admin on the basis of credentials provided and logg them into the system.
+
+paths:
+  /api:
+    post:
+      tags:
+        - Admin Login
+      description: Returns hello in specified language
+      parameters:
+        - in: "query"
+          name: "body"
+          required: true
+          description: "Accepts credentials from Admin for login purspose"
+          schema:
+            type : "object"
+            properties:
+              email:
+                type: "string"
+                example: "gaurav22gautam@gmail.com"
+              password:
+                type: "string"
+                example: "@Qwe1234"
+
+      responses:
+        '200':
+          description: "Admin added successfully"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+                example: "admin logged in successfully"

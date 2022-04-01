@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: "Admin Signup"
+  description: An API to register details of an admin onto the system.
+
+paths:
+  /api:
+    post:
+      tags:
+        - Admin Signup
+      description: Returns hello in specified language
+      parameters:
+        - in: "query"
+          name: "body"
+          required: true
+          description: "Accept signup data from admin and stores it in database"
+          schema:
+            type : "object"
+            properties:
+              firstName:
+                type : "string"
+                example : "Gaurav"
+              lastName:
+                type: "string"
+                example: "Gaurav"
+              email:
+                type: "string"
+                example: "gaurav22gautam@gmail.com"
+              password:
+                type: "string"
+                example: "@Qwe1234"
+              image:
+                type: "object"
+                example: "any .jpg file"
+              phone:
+                type: "integer"
+                example: 7009003707
+              countryCode:
+                type: "string"
+                example: "91"
+      responses:
+        '200':
+          description: "Admin added successfully"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+                example: "admin added successfully"
